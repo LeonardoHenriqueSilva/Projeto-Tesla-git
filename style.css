@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*o item acima é uma fonte encontrada no google font, chamada poppins*/
+
+
+* {
+    font-family: "Poppins", sans-serif; /*Todo o projeto vai usar essa fonte*/
+    margin: 0; /*Espaçamento externo*/
+    padding: 0; /*Espaçamento interno*/
+    box-sizing: border-box;
+}
+
+html {
+    scroll-snap-type: y mandatory; /* Essa função pula de uma imagem para outra, de cima para baixo
+    sem parar nomeio --- Mais é nessessario colocar outra propriedade (no nosso casa dentro das
+    listas que esta com o nome (item))*/
+}
+
+video, .img-imagem-Tesla {  /*Essa configuração vai servir tanto para o video como para as imagens*/
+
+    width: 100%; /*Largura*/
+    height: 100%; /*Altura*/
+    position: absolute; /*é uma posição exata que eu desejar*/
+    top: 0; /*zero do topo*/
+    left: 0; /*Zero da esquerda*/
+    z-index: -1; /*Define quem vai ficar na frente de quem (por padrao todos vem como 1 ou seja um 
+    ao lado do outro, mais quando coloco -1, estou avisando que esse elemento, vai ficar atrás)*/
+
+    object-fit: cover; /*faz com que o elemento cubra toda a tela (no cado, usamos o cover, 
+    que cobre toda a tela)*/
+
+    filter: brightness(60%); /*Faz com que o video fique um pouco mais escuro*/
+    
+}
+
+/*
+Posso Estilazr nossa imagem dessa maneira, poxando a mesma comfiguração do nosso video, ou posso mencionar 
+nossa imagem na mesma linha que mencionei o video, vai funcionar da mesma maneira.
+
+
+.img-imagem-Tesla {
+    width: 100%;       Largura
+    height: 100%;       Altura
+    position: absolute;       é uma posição exata que eu desejar
+    top: 0;       zero do topo
+    left: 0;       Zero da esquerda
+    z-index: -1;       Define quem vai ficar na frente de quem (por padrao todos vem como 1 ou seja um 
+    ao lado do outro, mais quando coloco -1, estou avisando que esse elemento, vai ficar atrás)
+
+    object-fit: cover;       faz com que o elemento cubra toda a tela (no cado, usamos o cover, 
+    que cobre toda a tela)
+
+    filter: brightness(60%); Faz com que o video fique um pouco mais escuro
+}*/
+
+.Logo {
+   filter: brightness(100); /*deixa a imagem transparente, podendo colocar-la em um video*/
+   position: fixed; /*deixa a imagem na frente do video*/
+   width: 120px; /*Deixou a largura da imagem menor e no topo*/
+}
+
+.item { /*Nome colocado na primeira caixa*/
+    
+    display: flex; /* (Habilita algumas propriedades css )Nos ajuda a organizar nossos itens*/
+
+    justify-content: space-between; /*(Cria um espaçamento entre os itens)
+    Ele define como os intens se distanciam um dos outros*/
+
+    flex-direction: column; /* deixa um item debaixo do outro.
+    Direciona os itens, nesse caso foi usado o column(coluna)*/
+
+    
+    position: relative;
+
+    height: 100vh; /*Altura - tela toda*/
+    width: 100vw; /*Largura - tela toda*/
+
+    scroll-snap-align: start; /*Essa propriedade é vinculada ao (scroll-snap-type) mwncionado
+    la na tag HTML - Que vai servir para pular a tela toda de cada item da lista */
+
+    
+}
+
+h1 {
+    color: white; /*Coloca uma cor no h1 que é normalmente nosso titulo*/
+    font-size: 50px; /*Aumenta o tamanho da letra*/
+}
+
+
+.sub-titulo{ 
+    color: white; /*Coloca uma cor no paragrafo que colocamos o nome de sub-titulo*/
+}
+
+.info-carro{ /*Nome colocado na segunda caixa*/
+    margin-top: 80px; /* Cria um espaçamento na parte de cima*/
+    text-align: center; /*Alinha o texto (ou item) no centro*/
+}
+
+.rodape{ /*Nome colocado na terceira caixa*/
+    text-align: center; /*Alinha o texto (ou item) no centro*/
+}
+
+button {
+    background-color: rgba(34, 34, 34, 0.8); /*Troca a cor de FUNDO (nesse caso usamos o rgba
+    34, 34, 34, 0.8; as três primeiras é nossa cor e a ultima é a transparência sendo 1,
+    sem transparência e 0 totalmente transparênte)*/
+
+    color: white; /*Muda a cor dentro do botão (o texto)*/
+    padding: 7px 80px; /* Espaçamento interno -- primeiro numero aplica em cima e embaixo
+     o segundo numero lado esquerdo e direito*/
+
+     border-radius: 5px; /*Deixa a borda do botão arredondada*/
+
+     border: none; /*Tira toda a cor das bordas*/
+
+    /* opacity: 0.8; é usado para fazer a transparência do item, 
+    pórem podemos fazer dentro do background - Exemplo esta na propriedade BACKGROUND-COLOR*/
+
+    cursor: pointer; /*Muda o formato do mouse, de padrão vem seta e com essa propriedade
+    se torna uma maozinha*/
+}
+
+.test-drive {
+    background-color: white; /*Troca a cor de fundo do botão*/
+
+    color: black; /*Muda a cor dentro do botão (o texto)*/
+}
+
+.testo-rodape {
+    color: white; /*Troca a cor do paragrafo (texto)*/
+    font-size: 12px; /*Aumenta o tamanho da letra*/
+    margin-top: 10px; /* Cria um espaçamento na parte de cima*/
+}
+
+.titulo-item3, .sub-titulo-item3 { /*Mudando a cor do h1 e paragrafo da lista item 3*/
+    color: black;
+}
+
+.formulario {
+
+    position: fixed; /*deixa a posição fixada na frente da imagem ou video*/
+    top: 40px; /*Sobe todo para o topo e desce 40 px*/
+    width: 600px; /*Largura de 600px*/
+    height: 100%; /*Vai ocupar tudo que ele tem de altura*/
+
+    z-index: 3; /*Define quem vai ficar na frente de quem (por padrao todos vem como 1 ou seja um 
+    ao lado do outro, mais quando coloco 3, estou avisando que esse elemento, vai ficar 2 passos a 
+    frente)*/
+
+    left: -45%; /* (ir para a esquerda) Tras o formulario para o meio da tela, alias quase no meio  ----- 
+    porem para fazer o formulario começar fora da nossa tela, vou alterar o left para -50%, assim
+    ele começa fora da nossa tela */
+
+    transition: 1.5s; /*Essa função faz que com que a mudança de um estilo para o outro aconteça nos
+    segundos determinados, nesse caso coloquei 1.5s então o formulario que esta com -45 de left vai para
+    *45 em 1.5s segundos, dando um efeito que parece que o formulário anda*/
+
+
+
+}

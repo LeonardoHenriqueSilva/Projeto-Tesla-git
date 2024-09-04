@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Devclub - Tesla</title>
+</head>
+
+<body>
+
+    <img src="img/logo.png" alt="Logo da Tesla" class="Logo">
+
+
+    <ul class="lista"> <!---Usamos ul para fazer uma lista-->
+
+        <!---<div class="item"> Nossa Primeira caixa que terá o nome de item -- antes da ul e li-->
+
+
+        <!--ITEM 1-->
+        <li class="item"> <!---usamos li para mencionar o Primeiro item da lista-->
+
+
+            <video src="img/model-y.mp4" autoplay loop muted></video>
+            <!--AutoPlay para rodar o video, loop - para repetir e muted - para ficar mudo-->
+
+
+            <div class="info-carro"><!---Nossa segunda caixa que terá o nome de informações-carro-->
+                <h1>Modelo y</h1> <!--Titulo-->
+                <p class="sub-titulo">Parcelas apartir de 499 dolar</p>
+            </div>
+
+            <div class="rodape"><!---Nossa terceira caixa que terá o nome de rodape-->
+
+                <button onclick="aparecerFormulario()">Comprar agora</button> <!--Usamos a função on
+                clique nesse botão, ou seja toda vez que clicar nesse botão, o sistema vai la no JS
+                e vai rodar a função que determinei, nesse caso vai fazer aparecer o formulário 
+                (não esquecer de colocar parenteses depois da função)-->
+
+                <button class="test-drive">Faça um teste Drive</button>
+                <p class="testo-rodape">Não garantimos seu veiculo imediatamente. Condultar estoque!</p>
+                <!--Paragrafo-->
+            </div>
+
+        </li>
+
+
+        <!--ITEM 2-->
+        <li class="item"> <!---usamos li para mencionar o Segundo item da lista-->
+
+            <img class="img-imagem-Tesla" src="img/model-3.png" alt="Imagem 3">
+
+            <div class="info-carro"><!---Nossa segunda caixa que terá o nome de informações-carro-->
+                <h1>Modelo 3</h1> <!--Titulo-->
+                <p class="sub-titulo">Parcelas apartir de 599 dolar</p> <!--Paragrafo-->
+            </div>
+
+        </li>
+
+
+        <!--ITEM 3-->
+        <li class="item"> <!---usamos li para mencionar o Terceiro item da lista-->
+
+            <img class="img-imagem-Tesla" src="img/model-x.png" alt="Imagem x">
+
+            <div class="info-carro"><!---Nossa segunda caixa que terá o nome de informações-carro-->
+                <h1 class="titulo-item3">Modelo s</h1> <!--Titulo-->
+                <p class="sub-titulo-item3">Parcelas apartir de 699 dolar</p> <!--Paragrafo-->
+            </div>
+
+        </li>
+
+
+
+        <!---</div> Fechamento da div antes das ul e li-->
+
+
+    </ul><!--Fechamento da lista-->
+
+
+    <div class="formulario"> <!--Caixa que armazenar o formulário-->
+        <button onclick="desaparecerFormulario()">Fechar</button>
+        <!--Vai ter a função de fechar nossa caixa, que é o nosso formulário-->>
+        <!--Usamos a função onclique nesse botão, ou seja toda vez que clicar nesse botão, 
+        o sistema vai la no JS e vai rodar a função que determinei, nesse caso vai fazer 
+        desaparecer o formulário (não esquecer de colocar parenteses depois da função)-->>
+
+        <script type="text/javascript" src="https://form.jotform.com/jsform/242107563734051"></script>
+        </script> <!--
+        Formulário montado no https://www.jotform.com/-->
+    </div>
+
+
+</body>
+<script src="tesla.js"></script>
+
+</html>
